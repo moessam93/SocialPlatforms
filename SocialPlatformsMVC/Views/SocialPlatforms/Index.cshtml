@@ -1,0 +1,29 @@
+﻿@using SocialPlatformsAPI.Dto
+@model List<SocialPlatformDto>
+    
+@{
+    ViewData["Title"] = "Social Platforms Page";
+}
+
+<div>
+    <div>
+        <a asp-controller="SocialPlatforms" asp-action="AddPlatform" class="btn btn-primary">Add New Platform</a>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Social Platform ID</td>
+                <td>Social Platform</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Key</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
