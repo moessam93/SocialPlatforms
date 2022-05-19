@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Data.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.Extensions.Configuration;
@@ -10,16 +11,16 @@ using System.Threading.Tasks;
 
 namespace SocialPlatformsAPI.Data.Entities
 {
-    public class DataContext:DbContext
+    public class DataContext:IdentityDbContext
     {
         public DataContext() { }
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<SocialPlatform> socialPlatforms { get; set; }
         public DbSet<Languages> languages { get; set; }
         public DbSet<SocialPlatformTranslations> SocialPlatformTranslations { get; set; }
-        public DbSet<Users> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<SocialPlatformTranslations>().HasKey(x => new { x.SocialPlatformId, x.LanguageId });
 
             modelBuilder.Entity<SocialPlatform>()

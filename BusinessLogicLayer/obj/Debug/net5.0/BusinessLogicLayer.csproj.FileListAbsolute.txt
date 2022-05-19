@@ -1,3 +1,5 @@
+C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\appsettings.json
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\BusinessLogicLayer.deps.json
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\BusinessLogicLayer.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\BusinessLogicLayer.pdb
@@ -10,8 +12,6 @@ C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\Bus
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\BusinessLogicLayer.csproj.CopyComplete
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\BusinessLogicLayer.dll
+C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\refint\BusinessLogicLayer.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\BusinessLogicLayer.pdb
 C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\ref\BusinessLogicLayer.dll
-C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\bin\Debug\net5.0\appsettings.json
-C:\Users\Tech\Desktop\SocialPlatformsAPI\BusinessLogicLayer\obj\Debug\net5.0\refint\BusinessLogicLayer.dll

@@ -3,6 +3,7 @@ using DataAccessLayer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +31,7 @@ namespace SocialPlatformsMVC
             services.AddControllersWithViews();
             services.AddScoped<ISocialPlatformBLL, SocialPlatformBLL>();
             services.AddScoped<ISocialPlatformDAL, SocialPlatformDAL>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DataContext>();
             services.AddHttpClient();
             services.AddDbContext<DataContext>(options =>
             {
@@ -53,6 +55,8 @@ namespace SocialPlatformsMVC
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseRouting();
 

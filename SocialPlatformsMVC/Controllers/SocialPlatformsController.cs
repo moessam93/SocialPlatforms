@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialPlatformsAPI.Data.Entities;
 using SocialPlatformsAPI.Dto;
@@ -16,6 +17,7 @@ namespace SocialPlatformsMVC.Controllers
             _iBLL = iBLL;
         }
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<List<SocialPlatformDto>>> Index()
         {
             List<SocialPlatformDto> platforms = await _iBLL.GetAllPlatforms();
@@ -23,12 +25,14 @@ namespace SocialPlatformsMVC.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult AddPlatform()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult<List<SocialPlatform>>> AddPlatform(SocialPlatform platform)
         {
