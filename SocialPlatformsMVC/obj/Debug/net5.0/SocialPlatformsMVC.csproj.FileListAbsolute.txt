@@ -116,7 +116,6 @@ C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Raz
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\SocialPlatforms\AddPlatform.cshtml.g.cs
-C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\SocialPlatforms\GetSingle.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\SocialPlatforms\Index.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
