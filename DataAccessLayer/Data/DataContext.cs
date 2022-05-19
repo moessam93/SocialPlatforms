@@ -19,11 +19,11 @@ namespace SocialPlatformsAPI.Data.Entities
         public DbSet<Languages> languages { get; set; }
         public DbSet<SocialPlatformTranslations> SocialPlatformTranslations { get; set; }
         public DbSet<Users> users { get; set; }
+        public DbSet<SocialPlatformPostTypes> SocialPlatformPostTypes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<SocialPlatformTranslations>().HasKey(x => new { x.SocialPlatformId, x.LanguageId });
-
             modelBuilder.Entity<SocialPlatform>()
                 .HasMany(platform => platform.Translations)
                 .WithOne(translation => translation.SocialPlatform);
