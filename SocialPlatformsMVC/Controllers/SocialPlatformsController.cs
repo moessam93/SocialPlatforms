@@ -22,13 +22,6 @@ namespace SocialPlatformsMVC.Controllers
             return View(platforms);
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<SocialPlatformDto>> GetSingle(int id)
-        //{
-        //    var platform = await _iBLL.GetSingle(id);
-        //    return View(platform);
-        //}
-        
         [HttpGet]
         public IActionResult AddPlatform()
         {
@@ -40,7 +33,7 @@ namespace SocialPlatformsMVC.Controllers
         public async Task<ActionResult<List<SocialPlatform>>> AddPlatform(SocialPlatform platform)
         {
             await _iBLL.AddPlatform(platform);
-            return RedirectToAction("GetAllPlatforms");
+            return RedirectToAction("Index");
         }
     }
 }
