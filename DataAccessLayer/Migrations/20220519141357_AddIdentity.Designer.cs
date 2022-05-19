@@ -10,8 +10,8 @@ using SocialPlatformsAPI.Data.Entities;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220519114156_AddingIdentity")]
-    partial class AddingIdentity
+    [Migration("20220519141357_AddIdentity")]
+    partial class AddIdentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

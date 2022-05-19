@@ -32,6 +32,7 @@ C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Mic
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
@@ -165,6 +166,8 @@ C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\sta
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\SocialPlatformsMVC.TagHelpers.input.cache
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\SocialPlatformsMVC.TagHelpers.output.cache
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\SocialPlatformsMVC.RazorCoreGenerate.cache
+C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -182,5 +185,3 @@ C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\ref
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\SocialPlatformsMVC.pdb
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\SocialPlatformsMVC.genruntimeconfig.cache
 C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\ref\SocialPlatformsMVC.dll
-C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
-C:\Users\Tech\Desktop\SocialPlatformsAPI\SocialPlatformsMVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs

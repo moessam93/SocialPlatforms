@@ -1,5 +1,6 @@
 using BusinessLogicLayer;
 using DataAccessLayer;
+using DataAccessLayer.Data.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,7 +32,7 @@ namespace SocialPlatformsMVC
             services.AddControllersWithViews();
             services.AddScoped<ISocialPlatformBLL, SocialPlatformBLL>();
             services.AddScoped<ISocialPlatformDAL, SocialPlatformDAL>();
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DataContext>();
+            services.AddIdentity<Users, IdentityRole>().AddEntityFrameworkStores<DataContext>();
             services.AddHttpClient();
             services.AddDbContext<DataContext>(options =>
             {

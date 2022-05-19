@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using DataAccessLayer.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SocialPlatformsMVC.Models;
 using System.Threading.Tasks;
@@ -7,9 +8,9 @@ namespace SocialPlatformsMVC.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
-        public AccountController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager)
+        private readonly UserManager<Users> _userManager;
+        private readonly SignInManager<Users> _signInManager;
+        public AccountController(UserManager<Users> userManager,SignInManager<Users> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -25,7 +26,7 @@ namespace SocialPlatformsMVC.Controllers
             //Validation
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var user = new Users { UserName = model.Email, Email = model.Email, FullName= model.FullName };
                 var result = await _userManager.CreateAsync(user,model.Password);
                 if (result.Succeeded)
                 {

@@ -18,6 +18,7 @@ namespace SocialPlatformsAPI.Data.Entities
         public DbSet<SocialPlatform> socialPlatforms { get; set; }
         public DbSet<Languages> languages { get; set; }
         public DbSet<SocialPlatformTranslations> SocialPlatformTranslations { get; set; }
+        public DbSet<Users> users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
