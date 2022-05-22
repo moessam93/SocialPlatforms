@@ -7,10 +7,11 @@
     ViewData["Title"] = "Create New Platform";
 }
 <h1>Create</h1>
+<div id="PlaceHolderHere"></div>
 <form method="post" asp-action="AddPlatform">
     <div class="border p-3">
         <div class="form-group row">
-            <h2 class="text-black-50 pl-3">Add Item</h2> 
+            <h2 class="text-black-50 pl-3">Add Social Platform</h2> 
         </div>
         <div class="row">
             <div class="col-12">
@@ -33,7 +34,7 @@
                             <a asp-action="Index" class="btn btn-danger w-75">Back</a>
                         </div>
                         <div class="col">
-                            <input type="submit" class="btn btn-info w-100" value="Add Social Platform Post Type" />
+                            <button type="button" class="btn btn-info w-100" data-toggle="ajax-modal" data-target="#addPostType" data-url=@Url.Action("AddPostType","SocialPlatformPostTypes")>Add Post Type</button>
                         </div>
                     </div>
                 </div>
