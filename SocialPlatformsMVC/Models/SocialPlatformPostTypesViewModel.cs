@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SocialPlatformsAPI.Data.Entities;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SocialPlatformsMVC.Models
 {
@@ -7,9 +9,10 @@ namespace SocialPlatformsMVC.Models
         [Required]
         [DataType(DataType.Text)]
         [Display(Name ="Social Platform")]
-        public string SocialPlatform { get; set; }
+        public int SocialPlatformId { get; set; }
         [Required]
         [DataType(DataType.Text)]
         public string Key { get; set; }
+        public List<SocialPlatform> SocialPlatforms { get; set; }
     }
 }

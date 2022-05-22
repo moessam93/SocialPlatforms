@@ -1,5 +1,5 @@
 ﻿@using DataAccessLayer.Data.Entities
-@model SocialPlatformPostTypes
+@model SocialPlatformPostTypesViewModel
 
 <div class="modal fade" id="addPostType">
     <div class="modal-dialog">
@@ -15,9 +15,9 @@
                     <div class="form-group">
                         <label asp-for="SocialPlatformId">Social Platform</label>
                         <select asp-for="SocialPlatformId">
-                            @if (ViewBag.AllSocialPlatforms != null)
+                            @if (Model.SocialPlatforms != null)
                             {
-                                foreach (var socialPlatform in ViewBag.AllSocialPlatforms)
+                                foreach (var socialPlatform in Model.SocialPlatforms)
                                 {
                                     <option value=@socialPlatform.Id>@socialPlatform.Key</option>
                                 }
