@@ -6,8 +6,10 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using AutoMapper;
+using BusinessLogicLayer.Dto;
 using DataAccessLayer;
 using DataAccessLayer.Data.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using ServiceStack.Configuration;
@@ -24,21 +26,43 @@ namespace BusinessLogicLayer
         private readonly IMapper _mapper;
         private readonly IHttpClientFactory _clientFactory;
         private readonly IConfiguration _configuration;
-
-        public SocialPlatformBLL(IMapper mapper, ISocialPlatformDAL iDAL, IHttpClientFactory clientFactory, IConfiguration configuration )
+        private readonly DataContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public SocialPlatformBLL(IMapper mapper, ISocialPlatformDAL iDAL, IHttpClientFactory clientFactory, IConfiguration configuration, DataContext context, IHttpContextAccessor httpContextAccessor )
         {
             _mapper = mapper;
             _iDAL = iDAL;
             _clientFactory = clientFactory;
             _configuration = configuration;
+            _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
-        public async Task<List<SocialPlatformDto>> GetAllPlatforms()
+        public async Task<List<SocialPlatformsDTO_2>> GetAllPlatforms()
         {
-            //get all platforms with translations
-            var socialPlatforms = await _iDAL.GetAllPlatforms();
 
+            //get all platforms with translations
+            var languageId = 1;
+            var socialPlatforms = await _iDAL.GetAllPlatforms();
+            var _socialPlatforms = new List<SocialPlatformsDTO_2>();
+            var translations = _context.SocialPlatformTranslations.ToList();
+            var languages = _context.languages.ToList();
+            var languageKey = _httpContextAccessor.HttpContext.Request.Headers.FirstOrDefault(x => x.Key == "languagekey");
+            
+                languageId = languages.FirstOrDefault(x=>x.Key==languageKey.Value[0]).Id;
+            
+            
+            foreach (var platform in socialPlatforms)
+            {
+                var _socialPlatform = new SocialPlatformsDTO_2();
+                _socialPlatform.Id = platform.Id;
+                if (translations.FirstOrDefault(x => x.LanguageId == languageId && x.SocialPlatformId == _socialPlatform.Id) != null)
+                {
+                    _socialPlatform.Name = translations.FirstOrDefault(x => x.LanguageId == languageId && x.SocialPlatformId == _socialPlatform.Id).Name;
+                }
+                _socialPlatforms.Add(_socialPlatform);
+            }
             //map dto using AutoMapper
-            return _mapper.Map<List<SocialPlatformDto>>(socialPlatforms);
+            return _socialPlatforms;
         }
 
         //Get Single

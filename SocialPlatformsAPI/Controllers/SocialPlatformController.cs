@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using SocialPlatformsAPI.Data.Entities;
 using BusinessLogicLayer;
 using DataAccessLayer.Data.Entities;
+using BusinessLogicLayer.Dto;
 using SocialPlatform = SocialPlatformsAPI.Data.Entities.SocialPlatform;
 
 namespace SocialPlatformsAPI.Controllers
@@ -35,7 +36,7 @@ namespace SocialPlatformsAPI.Controllers
 
         //Get All
         [HttpGet]
-        public async Task<ActionResult<List<SocialPlatformDto>>> GetAllPlatforms()
+        public async Task<List<SocialPlatformsDTO_2>> GetAllPlatforms()
         {
             #region
             //get all platforms with translations
@@ -66,7 +67,7 @@ namespace SocialPlatformsAPI.Controllers
             //map dto using AutoMapper
             //var result = _mapper.Map<IEnumerable<SocialPlatformDto>>(socialPlatformsList);
             #endregion
-            List<SocialPlatformDto> platforms = await _iBLL.GetAllPlatforms();
+            List<SocialPlatformsDTO_2> platforms = await _iBLL.GetAllPlatforms();
             return platforms;
         }
 

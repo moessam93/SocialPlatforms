@@ -36,6 +36,7 @@ namespace SocialPlatformsAPI
             services.AddScoped<ISocialPlatformBLL, SocialPlatformBLL>();
             services.AddScoped<ISocialPlatformDAL, SocialPlatformDAL>();
             services.AddHttpClient();
+            services.AddHttpContextAccessor();
             services.AddDbContext<DataContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
@@ -59,6 +60,16 @@ namespace SocialPlatformsAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.Use(async (context, next) =>
+            {
+                //check if language key is provided within the request header
+            if (context.Request.Headers.ContainsKey("languagekey") == false)
+                {
+                    context.Request.Headers.Add("languagekey","ar");    //if not exist set languagekey to ar
+                }
+                await next.Invoke();
+            });
 
             app.UseRouting();
 

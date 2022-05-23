@@ -1,5 +1,7 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Dto;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SocialPlatformsAPI.Data.Entities;
 using SocialPlatformsAPI.Dto;
@@ -18,9 +20,9 @@ namespace SocialPlatformsMVC.Controllers
         }
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<List<SocialPlatformDto>>> Index()
+        public async Task<ActionResult<List<SocialPlatformsDTO_2>>> Index()
         {
-            List<SocialPlatformDto> platforms = await _iBLL.GetAllPlatforms();
+            List<SocialPlatformsDTO_2> platforms = await _iBLL.GetAllPlatforms();
             return View(platforms);
         }
 
